@@ -1508,3 +1508,257 @@ footer.site-footer {
     align-items: flex-start !important;
   }
 }
+
+/* ================================================
+   ECOSISTEMA — VIDEOPODCAST & COMUNIDAD (v2 limpio)
+   ================================================ */
+
+.eco-section {
+  padding: 100px 0 96px;
+  background: #0b0f3c;;
+  position: relative;
+}
+
+/* Franja decorativa superior e inferior */
+.eco-section::before,
+.eco-section::after {
+  content: '';
+  position: absolute;
+  left: 0; right: 0;
+  height: 3px;
+}
+.eco-section::before {
+  top: 0;
+  background: linear-gradient(90deg, var(--acc), var(--acc2), transparent);
+}
+.eco-section::after {
+  bottom: 0;
+  background: linear-gradient(90deg, transparent, var(--acc2), var(--acc));
+}
+
+/* ── Encabezado ── */
+.eco-header {
+  margin-bottom: 64px;
+}
+
+.eco-overline {
+  font-size: 11px;
+  font-weight: 900;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin: 0 0 16px;
+}
+
+.eco-h2 {
+  font-size: clamp(2.2rem, 5vw, 3.4rem);
+  font-weight: 900;
+  line-height: 1.12;
+  color: #ffffff;
+  margin: 0;
+  letter-spacing: -0.02em;
+}
+
+/* ── Tarjetas apiladas ── */
+.eco-card {
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  gap: 0;
+  background: #ffffff;
+  border-radius: 24px;
+  overflow: hidden;
+  box-shadow: 0 2px 0 0 rgba(63,76,255,0.08), 0 20px 60px rgba(11,15,60,0.08);
+  border: 1px solid rgba(63,76,255,0.10);
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.eco-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 2px 0 0 rgba(63,76,255,0.12), 0 32px 80px rgba(11,15,60,0.14);
+}
+
+/* Columna izquierda */
+.eco-card-left {
+  background: #0b0f3c;
+  padding: 52px 36px 48px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.eco-card-left::after {
+  content: '';
+  position: absolute;
+  bottom: -60px; right: -60px;
+  width: 200px; height: 200px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(63,76,255,0.25) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.eco-label {
+  font-size: 11px;
+  font-weight: 900;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  padding: 4px 12px;
+  border-radius: 8px;
+  margin-bottom: 28px;
+  align-self: flex-start;
+}
+.eco-label--blue   { background: rgba(63,76,255,0.2);  color: #7b8fff; border: 1px solid rgba(63,76,255,0.35); }
+.eco-label--purple { background: rgba(139,123,255,0.2); color: #b0a4ff; border: 1px solid rgba(139,123,255,0.35); }
+
+.eco-icon-big {
+  font-size: 3rem;
+  line-height: 1;
+  margin-bottom: 24px;
+}
+
+.eco-card-title {
+  font-size: 1.55rem;
+  font-weight: 800;
+  color: #ffffff;
+  line-height: 1.2;
+  margin: 0 0 14px;
+  letter-spacing: -0.01em;
+}
+
+.eco-star { font-style: normal; }
+
+.eco-card-focus {
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.38);
+  margin: 0;
+}
+
+/* Columna derecha */
+.eco-card-right {
+  padding: 52px 52px 48px 48px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 0;
+  background: #fff;
+}
+
+.eco-card-intro {
+  font-size: 1.08rem;
+  color: #4a5080;
+  line-height: 1.7;
+  margin: 0 0 32px;
+  max-width: 600px;
+}
+
+/* Lista de features */
+.eco-features {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 36px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.eco-features li {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+}
+
+.eco-feat-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  flex-shrink: 0;
+  margin-top: 7px;
+}
+.eco-feat-dot--blue   { background: var(--acc); box-shadow: 0 0 0 3px rgba(63,76,255,0.15); }
+.eco-feat-dot--purple { background: var(--acc2); box-shadow: 0 0 0 3px rgba(90,59,255,0.15); }
+
+.eco-features li div {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.eco-features li strong {
+  font-size: 0.97rem;
+  font-weight: 700;
+  color: #0b0f3c;
+  line-height: 1.3;
+}
+
+.eco-features li span {
+  font-size: 0.9rem;
+  color: #6b739a;
+  line-height: 1.55;
+}
+
+/* CTA */
+.eco-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.92rem;
+  font-weight: 800;
+  color: var(--acc);
+  text-decoration: none;
+  letter-spacing: 0.01em;
+  padding: 0;
+  border: none;
+  background: none;
+  cursor: pointer;
+  transition: gap 0.2s ease, opacity 0.2s;
+  align-self: flex-start;
+}
+.eco-cta:hover { gap: 12px; opacity: 0.8; }
+.eco-cta--purple { color: var(--acc2); }
+
+/* Divisor entre tarjetas */
+.eco-divider {
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(63,76,255,0.18), transparent);
+  margin: 28px 0;
+}
+
+/* Layout flip — columna derecha primero en segunda tarjeta */
+@media (min-width: 861px) {
+  .eco-card--flip {
+    grid-template-columns: 1fr 280px;
+  }
+  .eco-card--flip .eco-card-left {
+    order: 2;
+  }
+  .eco-card--flip .eco-card-right {
+    order: 1;
+    padding: 52px 48px 48px 52px;
+  }
+}
+
+/* ── Responsive ── */
+@media (max-width: 860px) {
+  .eco-section { padding: 72px 0; }
+
+  .eco-card {
+    grid-template-columns: 1fr;
+  }
+  .eco-card-left {
+    padding: 40px 28px 36px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 16px;
+  }
+  .eco-icon-big { margin-bottom: 0; font-size: 2.2rem; }
+  .eco-card-title { font-size: 1.3rem; margin: 0; }
+  .eco-card-focus { display: none; }
+  .eco-label { margin-bottom: 0; }
+  .eco-card-right { padding: 36px 28px 40px; }
+}
